@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     }
     @IBAction func addShowButtonWasPressed(_ sender: Any) {
         guard let showName = addShowTextField.text else { return }
+        if showName.isEmpty { return }
         shows.append(showName)
         updateShowsLabel()
         addShowTextField.text = ""
